@@ -79,6 +79,15 @@ Lots of people build with React using Amazon sw3 or Heroku to be in a distribute
 
 He was editing `src/App.js` 
 
+***
+After lunch on Tuesday
+***
+
+Discussion: what do we do in serving these on an actual server (I ask)
+
+Go look up / find out about: 
+* npm build  (this, I think, builds up full HTML files and "rehydrates" w/ JavaScript?)
+* npm serve  (turns any directory into a server
 
 ## Create React App
 
