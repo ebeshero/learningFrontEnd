@@ -1,5 +1,10 @@
 # Notes day 2 React/FrontEnd class
 
+RUN STUFF FROM TERMINAL WITH 
+```
+npm run start
+```
+
 These notes are meant to complement those posted on: <https://github.com/oncomouse/dhsi2019/blob/master/day02.md>
 
 We're using new syntax from React.
@@ -88,6 +93,25 @@ Discussion: what do we do in serving these on an actual server (I ask)
 Go look up / find out about: 
 * npm build  (this, I think, builds up full HTML files and "rehydrates" w/ JavaScript?)
 * npm serve  (turns any directory into a server
+
+We work on a little mouse event interactivity: how to attach an event listener to an object.
+
+In object-oriented programming we have 3 Prototypes to work with: 
+
+* array
+* string
+* event
+
+All event handler functions are passed to the object that calls them. 
+
+### Application State
+How to get the JavaScript to hold data in memory as it receives updated info. 
+If we want data that persists, we might want to be able to delete and add new bits to it. 
+
+Hooks are things that persist outside the render cycle. 
+
+1) state: the state hook allows data to be stored 
+
 
 ## Create React App
 
