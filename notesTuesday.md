@@ -1,5 +1,9 @@
 # Notes day 2 React/FrontEnd class
 
+Solutions to Day 1 Exercises: <https://gist.github.com/oncomouse/0b86a0c514385b0419895018b5ec9501>
+
+Solutions to Day 2 Exercises: <https://gist.github.com/oncomouse> 
+
 RUN STUFF FROM TERMINAL WITH 
 ```
 npm run start
