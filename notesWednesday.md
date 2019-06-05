@@ -1,8 +1,45 @@
 # Day 3 – Doing Everything With Style!
-
-Solutions to Exercises are on Andrew's Gist: <https://gist.github.com/oncomouse> 
-
+### Some random stuff:
 React native is for building cell phone apps.
+
+Helpful resource on Ramda functions: "What Ramda function should I use?"
+<https://github.com/ramda/ramda/wiki/What-Function-Should-I-Use>
+
+Solutions to Day 2 Exercises are on Andrew's Gist: <https://gist.github.com/oncomouse> 
+
+Discussion of use states:
+
+typically 2 variables, the original, and the newly altered
+const [words, setWords] = useState('');
+but, hypothetically, we can also use spread to get even more values:
+
+const [words, setWords, ...otherArrayElements] = useState('');
+this destructures the array into useful pieces to call. 
+
+Like this:
+```
+const update = (key, value, object) => ({...object, [key]: value})
+
+update('foo', 'bar', {name: 'Andrew'}) 
+// This yields: ({name:Andrew, foo:bar}) with a new key value pair. Notice you need the square brackets to ensure key becomes a real key.
+
+update('foo', 'bar', {foo: 'Andrew'})
+//yields ({foo:bar, foo:Andrew}
+ ```
+
+Object concatenation using spread notation:
+
+configuration = {
+ age:34
+}
+defaultConfiguration = {
+ age:0
+ name: 'person',
+ height: 56
+}
+
+newConfiguration = { ...defaultConfiguration, ...configuration} 
+//This appends one to the other, basically concatenates. If you don't spread out ...configuration, it'll get nested inside defaultConfiguration
 
 
 As we will talk about numerous times today, CSS (Cascading StyleSheets) is a great technology for styling websites in a structured and logical manner. It was an important web technology when it was developed because it decoupled design from content: HTML was, as it was always intended, a language for describing what the elements of a website were semantically ("this is a heading level 1, this is a paragraph, here's a table!") while CSS told the browser how the designer wanted these individual document elements to appear.
@@ -46,6 +83,21 @@ A couple of other rules for BEM:
 * Biggest challenge in BEM (and a source of debate amongst its users) is when an Element can instead by considered a Block.
 	* Best advise is if you see yourself reusing the Element outside its associated Block, think about making it a B
 	Block.
+
+#### ebb Notes
+BEM: do EVERYTHING in classes, don't use ids. 
+BEM CSS conventions for classes: all lowercase class names: 
+.sidebar
+.main
+.doc-card 
+.filter-results
+(this is called "spear notation" using hyphens as separators.) 
+
+.main__title 
+.doc-card__title
+.doc-card__example
+.doc-card__codeblock
+
 
 Sample BEM code:
 
@@ -91,6 +143,12 @@ And the HTML that uses it:
   </div>
 </form>
 ~~~
+
+#### ebb Notes: on the Modifier part of BEM:
+.feedback {border-color:black;}
+.feedback--modifier {border-color:red}
+(a new class)
+For an alert state, you could do a ternary state operation to switch class names in HTML under particular conditions. 
 
 ### CSS and Namespacing
 
@@ -154,7 +212,6 @@ So, while CSS Modules are a bit of a pain, they can be useful if you have issues
 The React ecology has a variety of JavaScript tools that address the chaos that can result in building large applications. However, as with CSS Modules and everything else we'll talk about today, tools that are more complicated than loading CSS into the global namespace are all going to add a degree of complication to your coding. Part of managing a React project is choosing tools whose inconveniences do not exceed their benefits. You may not need anything we talk about from here on out (CSS Modules, SASS, or CSS-in-JS) for most simple React projects, but a big project will most likely require something like this.
 
 ## Adding SASS to React
-
 SASS stands for Syntactically Aware StyleSheets.
 
 It is a CSS pre-processor that defines a super-set of CSS features (variables, mixins, functions, control structures) and offers a transpiler that processes this supped up version of CSS (called SCSS) into regular CSS. So, you write code in SCSS and have an application boilerplate (like Create React App) compile your SCSS into CSS code.
