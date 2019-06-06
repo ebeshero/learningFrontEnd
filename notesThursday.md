@@ -1,9 +1,11 @@
 # Thursday notes
 Code stuff today: /Users/elisa/Documents/GitHub/learningFrontEnd/dhsi2019-react/src/Remote.js
 
+NOTE: There's a react-data-table(?) library that does automatic table data sorting by column. 
+
 //We're doing **asynchronous programming** when we access internet APIs. We start
 // accessing a website, and wait and listen for it to finish; then continue
-// working with website data. 
+// working with website data. We'll use `useEffect` along with `useState` for this.
 
 Try **Formic**, the React library that holds all the form functionality we were tinkering with in class.
 
