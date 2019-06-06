@@ -228,7 +228,10 @@ The most important feature in SASS (imo) is the addition of variables. [There is
 
 Why would you want variables in your CSS, you may ask? Well, say you're writing a large CSS file for an application and you want the `margin-bottom` for your components to be based on a 15px rhythm (so that you could have a double margin that would be 30px and a triple at 45px). If someone higher up in the project said "you know, I think that's not enough space, make the rhythm 20px", you might be doing a lot of find and replace to get all the rhythms in your code.
 
-In SCSS:
+ebb notes: All CSS files can just be SCSS b/c SCSS can deal with old CSS too. 
+Our NodeSass has a compiler and run a "watcher" on the command line over a directory with SCSS, so it can convert. But the original SASS interpreter was written in RUBY, though the original developers now work in Node. Whether NodeSass or RubySass, you compile your code in CSS and post. Jekyll (many Jekyll themes) support SASS out of the box.
+
+In SCSS: variables begin with `$`: 
 
 ~~~scss
 $rhythm: 15px;
@@ -542,6 +545,10 @@ p {
   }
 }
 ~~~
+
+##### ebb: NOTE: 
+* SASS has no capacity to read HTML the way JavaScript can read innerHTML. So the if/else stuff responds to CSS styling only. 
+* if/else isn't that widely used in SASS
 
 #### Loops
 
