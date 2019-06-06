@@ -1,4 +1,5 @@
 # Thursday notes
+
 Code stuff today: /Users/elisa/Documents/GitHub/learningFrontEnd/dhsi2019-react/src/Remote.js
 
 NOTE: There's a react-data-table(?) library that does automatic table data sorting by column. 
@@ -21,6 +22,20 @@ npm install isomorphic-fetch
 ```
 then  in your JS
 import fetch from `isomorphic-fetch`; 
+
+React router lets you define subpages for a multi-page site.
+
+To create a NEW react workspace, you will need to do the following:
+1. Create a Folder
+1. Open in Visual Studio Code and get a new terminal with `ctrl + ~`
+1. In the terminal: 
+    * `npx create-react-app`
+    * `npm install ramda`
+    * `npm install node-sass`
+    * Or, if you want to install globally and not just on a specific workspace: `npm install -g node-sass`
+1. `npm run start` to get started testing in localhost
+1. `npm run build publicURL`  (read documentation on this) 
+
 
 *******
 *******
